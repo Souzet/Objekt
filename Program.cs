@@ -10,20 +10,35 @@ namespace Objekt
     {
         class Point
         {
-            public double x, y;
-            public Point (double X, double Y)
+            public int x, y;
+            public Point (int X, int Y)
             {
                 x = X; y = Y;
             }
-            public Point() { }
+           
         }
         static void Main(string[] args)
         {
-            Point p, q;
-            p = new Point() { x = 12.3, y = 17.5 };
-            q = new Point(12.3, 17.5);
-            Console.WriteLine($"p =<{p.x}, {p.y}>");
-            Console.WriteLine($"q =<{q.x}, {q.y}>");
+            Point[] tria = new Point[3];
+
+            tria[0] = new Point(0, 0);
+            tria[1] = new Point(10, 0);
+            tria[2] = new Point(0, 10);
+            for (int i= 0; i< tria.Length; i++)
+            {
+                Console.WriteLine($"<{tria[i].x}, {tria[i].y}>");
+
+            }
+            List<Point> tria2 = new List<Point>(3);
+            tria2.Add(new Point(0, 0));
+            tria2.Add(new Point(0, 10));
+            tria2.Add(new Point(10, 0));
+            for (int i = 0; i < tria2.Count; i++)
+            {
+                Console.WriteLine($"<{tria2[i].x}, {tria2[i].y}>");
+            }
+
+
 
         }
     }
